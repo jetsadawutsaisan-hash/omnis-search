@@ -9,8 +9,8 @@ search:
   autocomplete: ""
   default_lang: "en"
   formats:
-    - html
     - json
+  max_results_per_engine: 20
 
 server:
   secret_key: "omnis_court_7f3k9m2p_2026"
@@ -24,41 +24,64 @@ ui:
   static_use_hash: true
 
 engines:
+  # === PRIMARY SEARCH ENGINES ===
   - name: google
     engine: google
     shortcut: g
     disabled: false
-    timeout: 6.0
-    
-  - name: duckduckgo
-    engine: duckduckgo
-    shortcut: ddg
-    disabled: false
-    timeout: 6.0
+    timeout: 5.0
     
   - name: bing
     engine: bing
     shortcut: bi
     disabled: false
-    timeout: 6.0
+    timeout: 5.0
     
-  - name: wikipedia
-    engine: wikipedia
-    shortcut: wp
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
     disabled: false
+    timeout: 5.0
     
+  # === NEWS ENGINES (OVER-FETCH) ===
   - name: google news
     engine: google_news
     shortcut: gn
     disabled: false
-    timeout: 6.0
+    timeout: 5.0
     
   - name: bing news
     engine: bing_news
     shortcut: bin
     disabled: false
+    timeout: 5.0
     
   - name: yahoo news
     engine: yahoo_news
     shortcut: yhn
     disabled: false
+    timeout: 5.0
+    
+  # === KNOWLEDGE BASE ===
+  - name: wikipedia
+    engine: wikipedia
+    shortcut: wp
+    disabled: false
+    timeout: 5.0
+    
+  # === DISABLED (save RAM) ===
+  - name: facebook
+    engine: facebook
+    disabled: true
+    
+  - name: twitter
+    engine: twitter
+    disabled: true
+    
+  - name: reddit
+    engine: reddit
+    disabled: true
+    
+  - name: youtube
+    engine: youtube
+    disabled: true
