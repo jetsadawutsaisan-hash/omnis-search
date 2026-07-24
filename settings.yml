@@ -1,0 +1,64 @@
+use_default_settings: true
+
+general:
+  instance_name: "OMNIS-COURT Search"
+  debug: false
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: "en"
+  formats:
+    - html
+    - json
+
+server:
+  secret_key: "omnis_court_7f3k9m2p_2026"
+  bind_address: "0.0.0.0"
+  port: 10000
+  limiter: false
+  public_instance: false
+  image_proxy: false
+
+ui:
+  static_use_hash: true
+
+engines:
+  - name: google
+    engine: google
+    shortcut: g
+    disabled: false
+    timeout: 6.0
+    
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    disabled: false
+    timeout: 6.0
+    
+  - name: bing
+    engine: bing
+    shortcut: bi
+    disabled: false
+    timeout: 6.0
+    
+  - name: wikipedia
+    engine: wikipedia
+    shortcut: wp
+    disabled: false
+    
+  - name: google news
+    engine: google_news
+    shortcut: gn
+    disabled: false
+    timeout: 6.0
+    
+  - name: bing news
+    engine: bing_news
+    shortcut: bin
+    disabled: false
+    
+  - name: yahoo news
+    engine: yahoo_news
+    shortcut: yhn
+    disabled: false
